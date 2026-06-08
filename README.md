@@ -5,6 +5,41 @@
 > Do not write placeholder text — if a section isn't done yet, leave it blank and come back.
 > Every section below is required for submission. One-liners will not receive full credit.
 
+## Local Runbook
+
+1. Add your source documents into `documents/` as `.txt`, `.md`, or `.pdf` files.
+2. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+3. Build embeddings index:
+
+```bash
+python build_index.py --chunk-size 700 --overlap 120
+```
+
+4. Test from CLI:
+
+```bash
+python query_cli.py "What do students say about professor feedback quality?" --top-k 5
+```
+
+5. Run interface:
+
+```bash
+python app.py
+```
+
+6. Run evaluation helper after filling `evaluation_questions.json`:
+
+```bash
+python evaluate.py
+```
+
+The script writes `evaluation_results.json`; copy the results into the Evaluation Report table below and add your qualitative judgments.
+
 ---
 
 ## Domain

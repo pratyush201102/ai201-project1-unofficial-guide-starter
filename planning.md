@@ -9,7 +9,7 @@
 
 ## Domain
 
-<!-- What domain did you choose? Why is this knowledge valuable and hard to find through official channels? -->
+I am building an unofficial guide for **student-reported course and professor experience** (teaching style, grading strictness, exam difficulty, feedback quality, and workload). This knowledge is valuable because official catalogs describe course objectives but usually omit practical survival details students care about. It is hard to find through official channels because it is spread across informal sources and written in inconsistent language.
 
 ---
 
@@ -31,6 +31,11 @@
 | 9 | | | |
 | 10 | | | |
 
+Notes for collection quality:
+- Prioritize diversity: mix review-style, discussion-style, and long-form advice documents.
+- Keep each source focused enough to preserve context after chunking.
+- Save cleaned text snapshots in `documents/` as `.txt`/`.md`/`.pdf`.
+
 ---
 
 ## Chunking Strategy
@@ -40,11 +45,11 @@
      numbers fit the structure of your documents.
      A review-heavy corpus warrants different chunking than a long FAQ. -->
 
-**Chunk size:**
+**Chunk size:** 700 characters
 
-**Overlap:**
+**Overlap:** 120 characters
 
-**Reasoning:**
+**Reasoning:** Most student reviews are short and opinion-heavy, while some guides are multi-paragraph. A medium chunk size keeps each chunk semantically meaningful without merging unrelated points. Overlap helps preserve facts that cross boundaries (for example, professor + exam policy details split across two adjacent paragraphs). I will inspect sample chunks and tune size if retrieval is too broad (chunks too large) or too fragmented (chunks too small).
 
 ---
 
@@ -56,11 +61,11 @@
      would you weigh in choosing a different embedding model — context length, multilingual
      support, accuracy on domain-specific text, latency? -->
 
-**Embedding model:**
+**Embedding model:** `all-MiniLM-L6-v2` via `sentence-transformers`
 
-**Top-k:**
+**Top-k:** 5
 
-**Production tradeoff reflection:**
+**Production tradeoff reflection:** For production, I would compare larger embedding models for improved semantic fidelity on nuanced opinion text, especially if student language contains abbreviations and slang. I would evaluate multilingual support (if reviews are mixed-language), latency requirements for interactive querying, context-length alignment with chunking policy, and local-hosted vs API-hosted deployment constraints (privacy, cost stability, and scaling).
 
 ---
 
@@ -73,11 +78,11 @@
 
 | # | Question | Expected answer |
 |---|----------|-----------------|
-| 1 | | |
-| 2 | | |
-| 3 | | |
-| 4 | | |
-| 5 | | |
+| 1 | What do students say about how difficult Professor X exams are? | A specific summary of reported exam difficulty, backed by retrieved evidence and source names. |
+| 2 | Do students mention whether attendance matters for Course Y? | A grounded yes/no with nuance and source-backed detail. |
+| 3 | What feedback do students give about assignment turnaround time? | A summary of typical wait times or consistency issues, with citations. |
+| 4 | Which course is described as having the heaviest weekly workload? | A comparative answer grounded in retrieved workload statements. |
+| 5 | Are there contradictory opinions about Professor Z's grading fairness? | A balanced response that explicitly acknowledges disagreement in sources. |
 
 ---
 
@@ -87,19 +92,23 @@
      Consider: noisy or inconsistent documents, missing source attribution, off-topic
      retrieval, chunks that split key information across boundaries. -->
 
-1.
+1. Noisy source text can pollute retrieval (navigation text, repeated headers, copy artifacts), causing semantically weak chunks.
 
-2.
+2. Similar professor/course names can confuse retrieval if metadata is sparse, leading to wrong-source grounding.
+
+3. If key details are split across chunk boundaries, retrieval may return partial context and generation can become incomplete.
 
 ---
 
 ## Architecture
 
-<!-- Draw a diagram of your pipeline showing the five stages:
-     Document Ingestion → Chunking → Embedding + Vector Store → Retrieval → Generation
-     Label each stage with the tool or library you're using.
-     You can use ASCII art, a Mermaid diagram, or embed a sketch as an image.
-     You'll use this diagram as context when prompting AI tools to implement each stage. -->
+```mermaid
+flowchart LR
+     A[Document Ingestion\nPython + pdfplumber + file loaders] --> B[Chunking\nParagraph-aware splitter\nchunk_size=700 overlap=120]
+     B --> C[Embedding + Vector Store\nsentence-transformers all-MiniLM-L6-v2\nChromaDB PersistentClient]
+     C --> D[Retrieval\nTop-k semantic similarity search\nk=5]
+     D --> E[Generation\nGroq llama-3.3-70b-versatile\nGrounded prompt + source attribution]
+```
 
 ---
 
@@ -115,8 +124,8 @@
      "I'll give Claude my Chunking Strategy section and ask it to implement chunk_text()
      with my specified chunk size and overlap" is a plan. -->
 
-**Milestone 3 — Ingestion and chunking:**
+**Milestone 3 — Ingestion and chunking:** Use Copilot with the Domain, Documents, and Chunking Strategy sections as prompt context to generate loaders/cleaners/chunker. Expected output: reusable functions for file loading, text cleaning, chunk creation, and sample chunk inspection. Verification: manually inspect at least 5 chunks for readability, standalone meaning, and absence of HTML artifacts.
 
-**Milestone 4 — Embedding and retrieval:**
+**Milestone 4 — Embedding and retrieval:** Use Copilot with Retrieval Approach + Architecture diagram to generate index build and retrieval functions (embedding generation, ChromaDB upsert/query, source metadata handling). Expected output: scriptable indexing step and query function that returns chunk text, source, and distance. Verification: run 3 evaluation questions and confirm top results are relevant with distance typically below 0.5.
 
-**Milestone 5 — Generation and interface:**
+**Milestone 5 — Generation and interface:** Use Copilot with grounding requirement and desired response schema to generate Groq-backed answer generation and Gradio UI wiring. Expected output: end-to-end function returning answer + sources, plus web interface. Verification: test in-domain and out-of-domain questions; ensure out-of-scope prompts return insufficient-information response.

@@ -5,6 +5,7 @@
 - [ ] Choose one domain and write a 2–3 sentence summary.
 - [ ] Collect at least 10 source documents.
 - [ ] Record all sources in `source_log.csv`.
+- [ ] Run: `python sync_sources.py` and paste generated tables into planning/README.
 - [ ] Copy source list into `planning.md` and `README.md` tables.
 - [ ] Commit milestone progress.
 

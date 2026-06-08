@@ -1,24 +1,24 @@
 {
   "questions": [
     {
-      "question": "",
-      "expected_answer": ""
+      "question": "What do students report about the difficulty and focus of Professor Allen's exams?",
+      "expected_answer": "Exams focus on lecture examples and pattern recognition; midterms contain tricky application-style questions; final is cumulative and heavily weighted (approx. 40%); students recommend attending lectures and practicing homework problems."
     },
     {
-      "question": "",
-      "expected_answer": ""
+      "question": "How many weekly hours do students report for Data Structures?",
+      "expected_answer": "Approximately 8–12 hours per week on average, with higher hours during assignment-heavy weeks or for students without prior experience."
     },
     {
-      "question": "",
-      "expected_answer": ""
+      "question": "What do students say about grading turnaround in Professor Kim's course?",
+      "expected_answer": "Turnaround is inconsistent: some students report quick grading (3–5 days) with detailed comments, while others report delays of 2+ weeks and minimal feedback."
     },
     {
-      "question": "",
-      "expected_answer": ""
+      "question": "Do students recommend attending lectures to prepare for exams?",
+      "expected_answer": "Yes — students recommend attending lectures because exams often draw directly from lecture examples; copying examples and attending review sessions is advised."
     },
     {
-      "question": "",
-      "expected_answer": ""
+      "question": "Which course types do students report as having the heaviest workloads?",
+      "expected_answer": "Project-heavy courses (software-engineering style) peak at 20+ hours during project weeks; Data Structures and Algorithms are typically 10–15 hours per week; Intro-level courses report lower averages (~6–8 hours)."
     }
   ]
 }

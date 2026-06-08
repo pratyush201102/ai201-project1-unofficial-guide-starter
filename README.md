@@ -71,16 +71,16 @@ The script writes `evaluation_results.json`; copy the results into the Evaluatio
 
 | # | Source | Type | URL or file path |
 |---|--------|------|-----------------|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
-| 6 | | | |
-| 7 | | | |
-| 8 | | | |
-| 9 | | | |
-| 10 | | | |
+| 1 | RMP Intro Programming reviews set 1 | manual_export_txt | documents/rmp_intro_programming_reviews_01.txt |
+| 2 | RMP Data Structures reviews set 1 | manual_export_txt | documents/rmp_data_structures_reviews_01.txt |
+| 3 | RMP Algorithms reviews set 1 | manual_export_txt | documents/rmp_algorithms_reviews_01.txt |
+| 4 | Reddit CSMajors thread set 1 | manual_export_txt | documents/reddit_csmajors_professor_advice_01.txt |
+| 5 | Reddit University subreddit thread set 1 | manual_export_txt | documents/reddit_university_course_selection_01.txt |
+| 6 | Department unofficial FAQ copy | manual_export_md | documents/unofficial_department_faq.md |
+| 7 | Discord senior advice transcript 1 | manual_export_txt | documents/discord_senior_advice_01.txt |
+| 8 | Campus tutoring feedback notes | manual_export_txt | documents/tutoring_center_feedback_01.txt |
+| 9 | Assignment turnaround discussion set 1 | manual_export_txt | documents/assignment_turnaround_discussion_01.txt |
+| 10 | Course workload comparison notes | manual_export_txt | documents/course_workload_comparison_01.txt |
 
 ---
 

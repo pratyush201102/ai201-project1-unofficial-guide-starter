@@ -20,16 +20,16 @@ I am building an unofficial guide for **student-reported course and professor ex
 
 | # | Source | Description | URL or location |
 |---|--------|-------------|-----------------|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
-| 6 | | | |
-| 7 | | | |
-| 8 | | | |
-| 9 | | | |
-| 10 | | | |
+| 1 | RMP Intro Programming reviews set 1 | RateMyProfessors comments focused on exam format and difficulty | documents/rmp_intro_programming_reviews_01.txt |
+| 2 | RMP Data Structures reviews set 1 | RateMyProfessors comments about weekly workload and assignment intensity | documents/rmp_data_structures_reviews_01.txt |
+| 3 | RMP Algorithms reviews set 1 | RateMyProfessors comments about grading consistency and curves | documents/rmp_algorithms_reviews_01.txt |
+| 4 | Reddit CSMajors thread set 1 | Thread excerpts discussing how different CS professors teach | documents/reddit_csmajors_professor_advice_01.txt |
+| 5 | Reddit University subreddit thread set 1 | Thread excerpts on choosing professors and sections | documents/reddit_university_course_selection_01.txt |
+| 6 | Department unofficial FAQ copy | Student-maintained FAQ notes about class policies and expectations | documents/unofficial_department_faq.md |
+| 7 | Discord senior advice transcript 1 | Anonymized senior advice on how to succeed in core CS courses | documents/discord_senior_advice_01.txt |
+| 8 | Campus tutoring feedback notes | Student comments on TA office hours and tutoring usefulness | documents/tutoring_center_feedback_01.txt |
+| 9 | Assignment turnaround discussion set 1 | Collected comments about grading turnaround times | documents/assignment_turnaround_discussion_01.txt |
+| 10 | Course workload comparison notes | Student-reported weekly hour estimates by course | documents/course_workload_comparison_01.txt |
 
 Notes for collection quality:
 - Prioritize diversity: mix review-style, discussion-style, and long-form advice documents.

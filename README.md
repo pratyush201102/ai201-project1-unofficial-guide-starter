@@ -20,6 +20,18 @@ pip install -r requirements.txt
 python build_index.py --chunk-size 700 --overlap 120
 ```
 
+Optional milestone checks before generation:
+
+```bash
+python inspect_chunks.py --chunk-size 700 --overlap 120 --samples 5
+```
+
+Fill `retrieval_queries.json` with at least 3 test queries, then run:
+
+```bash
+python retrieval_check.py --top-k 5
+```
+
 4. Test from CLI:
 
 ```bash

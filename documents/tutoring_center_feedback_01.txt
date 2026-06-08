@@ -5,4 +5,9 @@ Source notes:
 - Keep details tied to specific courses when possible.
 
 Collected text:
+Collected text:
+
+Students praised the tutoring center for helpful walkthroughs of common assignment patterns but noted inconsistent hours. One comment: "The tutoring center saved me for lab 4 — the tutor walked me through testing strategies I didn't know." However, several students said that help peaks before deadlines and that it can be hard to get one-on-one time.
+
+There were also suggestions to use tutoring center sessions early in the week rather than at the last minute, and to bring concise failing test cases to make help more effective.
 

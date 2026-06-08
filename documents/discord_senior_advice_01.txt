@@ -5,4 +5,9 @@ Source notes:
 - Keep practical recommendations and cautionary notes.
 
 Collected text:
+Collected text:
+
+Senior students often advised forming a consistent weekly study schedule. One senior wrote: "Set aside a 2-hour block twice a week for project debugging; it's amazing how much progress you make when you treat debugging as uninterrupted time." Others suggested preparing a 'cheat sheet' of common misconceptions and edge cases for each course (for personal study only). Common pitfall warnings included not procrastinating on large projects and not assuming TAs will debug your code for you during office hours.
+
+Advice also covered handling graded feedback: save all returned assignments and their comments — several seniors used them to prepare for finals and find recurring mistakes.
 

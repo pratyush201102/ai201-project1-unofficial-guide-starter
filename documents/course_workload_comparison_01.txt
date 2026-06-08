@@ -5,4 +5,9 @@ Source notes:
 - Include context such as project-heavy vs exam-heavy courses.
 
 Collected text:
+Collected text:
+
+Students compared weekly workload estimates across several courses. For example, Intro Programming sections reported 6-8 hours per week for students who had some prior experience, while Data Structures and Algorithms were commonly reported at 10-15 hours per week. Project-heavy courses (software engineering-style) sometimes peaked at 20+ hours during project weeks.
+
+Practical advice: if you are balancing multiple CS courses, try to avoid two simultaneous project-heavy classes where possible, and check recent term forums for updated workload reports before finalizing your schedule.
 

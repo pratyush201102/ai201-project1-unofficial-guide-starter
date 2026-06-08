@@ -5,4 +5,9 @@ Source notes:
 - Keep each excerpt readable as a standalone paragraph.
 
 Collected text:
+Collected text:
+
+Students frequently discussed grading policies for Algorithms, with mixed opinions on the fairness of curves. One reviewer wrote: "The professor grades harshly on correctness but gives generous partial credit if your solution approach is clear." Another noted that midterms skew easier than finals, and that collaboration outside of formal groups was common practice for learning problem-solving techniques.
+
+Several posts mentioned that office hours are invaluable for clarifying proofs and understanding the reasoning behind algorithmic approaches. Reviewers advised reading lecture notes carefully and practicing a variety of problem types rather than relying solely on past exams.
 

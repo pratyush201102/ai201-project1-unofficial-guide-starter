@@ -5,4 +5,9 @@ Source notes:
 - Include comments about weekly hours and pacing.
 
 Collected text:
+Collected text:
+
+Multiple students commented that the workload in Data Structures is front-loaded: weekly problem sets plus labs can average 8-12 hours per week depending on your background. One typical comment: "Expect a steady stream of smaller assignments rather than a single big project — keep up weekly or you'll fall behind." Several reviews praised the TAs for helpful lab sessions but noted long queues before deadlines. There were consistent mentions that programming assignments range from straightforward implementation to edge-case-heavy debugging tasks; students recommended starting early and pairing for complex bugs.
+
+On exams, students reported that questions emphasize algorithmic complexity and corner cases. A few reviews indicated that partial credit is commonly awarded for reasonable approaches, so showing work on exam answers is beneficial.
 

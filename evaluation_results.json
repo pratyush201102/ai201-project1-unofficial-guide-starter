@@ -1,0 +1,231 @@
+{
+  "results": [
+    {
+      "question": "What do students report about the difficulty and focus of Professor Allen's exams?",
+      "expected_answer": "Exams focus on lecture examples and pattern recognition; midterms contain tricky application-style questions; final is cumulative and heavily weighted (approx. 40%); students recommend attending lectures and practicing homework problems.",
+      "system_answer": "Students report that Professor Allen's exams are focused on lecture examples, with \"trick\" questions that reuse homework wording, and that they reward pattern recognition more than deep theory. Practicing problem sets is crucial, and office hours are helpful but crowded before exams. The final is cumulative and heavily weighted.",
+      "sources": [
+        "documents/rmp_intro_programming_reviews_01.txt",
+        "documents/assignment_turnaround_discussion_01.txt",
+        "documents/reddit_csmajors_professor_advice_01.txt",
+        "documents/rmp_algorithms_reviews_01.txt"
+      ],
+      "retrieved_chunks": [
+        {
+          "text": "am format and difficulty.\n- Keep one review per paragraph.\n- Remove irrelevant website navigation text.\n\nCollected text:\nProfessor Allen's exams were consistently focused on lecture examples rather than the textbook. Multiple students note the midterm had several 'trick' questions that reused homework wording, so practicing problem sets was crucial. One review said: \"If you can do all the homework and attend lectures, you'll survive the midterms \u2014 they reward pattern recognition more than deep theory.\" Several reviewers mentioned office hours were helpful but crowded the week before exams. A few commenters warned that solutions posted online sometimes included mistakes, so double-check your work with peers.",
+          "source": "documents/rmp_intro_programming_reviews_01.txt",
+          "chunk_index": 1,
+          "distance": 0.7873514890670776
+        },
+        {
+          "text": "A few commenters warned that solutions posted online sometimes included mistakes, so double-check your work with peers.\nAnother reviewer highlighted that the final was cumulative and heavily weighted (40% of the grade), and that previous years' finals were good predictors for the exam style. Students recommended forming study groups and making a list of recurring question templates from lectures.",
+          "source": "documents/rmp_intro_programming_reviews_01.txt",
+          "chunk_index": 2,
+          "distance": 0.9663603901863098
+        },
+        {
+          "text": "# Assignment Turnaround Discussion Set 1\n\nSource notes:\n- Paste comments discussing grading turnaround times and feedback clarity.\n- Keep both positive and negative examples.\n\nCollected text:\nCollected text:\n\nDiscussion threads focused on grading turnaround times and feedback usefulness. Some students praised Professor Kim's course for quick (3-5 day) assignment grading and detailed comments, while others complained of 2+ week delays with minimal feedback. A typical suggestion was to ask for sample feedback during office hours if your graded submission lacks comments.",
+          "source": "documents/assignment_turnaround_discussion_01.txt",
+          "chunk_index": 0,
+          "distance": 1.1300846338272095
+        },
+        {
+          "text": "was stricter. Common advice included: attend lectures, copy down examples verbatim, and ask questions during recitation.\nSeveral commenters emphasized syllabus reading: \"This professor puts lots of grading policy details in the syllabus (like how late work is handled). If you ignore it, you'll miss how extensions are granted.\" There were also tips about which office hours are most helpful (TA vs professor) depending on the topic.",
+          "source": "documents/reddit_csmajors_professor_advice_01.txt",
+          "chunk_index": 1,
+          "distance": 1.1336078643798828
+        },
+        {
+          "text": "# RMP Algorithms Reviews Set 1\n\nSource notes:\n- Paste excerpts on grading fairness, curve policy, and exam coverage.\n- Keep each excerpt readable as a standalone paragraph.\n\nCollected text:\nCollected text:\n\nStudents frequently discussed grading policies for Algorithms, with mixed opinions on the fairness of curves. One reviewer wrote: \"The professor grades harshly on correctness but gives generous partial credit if your solution approach is clear.\" Another noted that midterms skew easier than finals, and that collaboration outside of formal groups was common practice for learning problem-solving techniques.",
+          "source": "documents/rmp_algorithms_reviews_01.txt",
+          "chunk_index": 0,
+          "distance": 1.138230562210083
+        }
+      ],
+      "retrieval_quality": "",
+      "response_accuracy": "",
+      "notes": ""
+    },
+    {
+      "question": "How many weekly hours do students report for Data Structures?",
+      "expected_answer": "Approximately 8\u201312 hours per week on average, with higher hours during assignment-heavy weeks or for students without prior experience.",
+      "system_answer": "Students reported 10-15 hours per week for Data Structures and Algorithms. Alternatively, another source mentioned that the workload in Data Structures can average 8-12 hours per week.",
+      "sources": [
+        "documents/course_workload_comparison_01.txt",
+        "documents/rmp_data_structures_reviews_01.txt",
+        "documents/tutoring_center_feedback_01.txt"
+      ],
+      "retrieved_chunks": [
+        {
+          "text": "# Course Workload Comparison Notes 1\n\nSource notes:\n- Paste student-reported weekly workload estimates by course.\n- Include context such as project-heavy vs exam-heavy courses.\n\nCollected text:\nCollected text:\n\nStudents compared weekly workload estimates across several courses. For example, Intro Programming sections reported 6-8 hours per week for students who had some prior experience, while Data Structures and Algorithms were commonly reported at 10-15 hours per week. Project-heavy courses (software engineering-style) sometimes peaked at 20+ hours during project weeks.",
+          "source": "documents/course_workload_comparison_01.txt",
+          "chunk_index": 0,
+          "distance": 0.7369500398635864
+        },
+        {
+          "text": "on workload and assignment intensity.\n- Include comments about weekly hours and pacing.\n\nCollected text:\nCollected text:\nMultiple students commented that the workload in Data Structures is front-loaded: weekly problem sets plus labs can average 8-12 hours per week depending on your background. One typical comment: \"Expect a steady stream of smaller assignments rather than a single big project \u2014 keep up weekly or you'll fall behind.\" Several reviews praised the TAs for helpful lab sessions but noted long queues before deadlines. There were consistent mentions that programming assignments range from straightforward implementation to edge-case-heavy debugging tasks; students recommended starting early and pairing for complex bugs.",
+          "source": "documents/rmp_data_structures_reviews_01.txt",
+          "chunk_index": 1,
+          "distance": 0.75761479139328
+        },
+        {
+          "text": "5 hours per week. Project-heavy courses (software engineering-style) sometimes peaked at 20+ hours during project weeks.\nPractical advice: if you are balancing multiple CS courses, try to avoid two simultaneous project-heavy classes where possible, and check recent term forums for updated workload reports before finalizing your schedule.",
+          "source": "documents/course_workload_comparison_01.txt",
+          "chunk_index": 1,
+          "distance": 0.9655139446258545
+        },
+        {
+          "text": "# RMP Data Structures Reviews Set 1\n\nSource notes:\n- Paste review excerpts focused on workload and assignment intensity.\n- Include comments about weekly hours and pacing.\n\nCollected text:\nCollected text:",
+          "source": "documents/rmp_data_structures_reviews_01.txt",
+          "chunk_index": 0,
+          "distance": 1.0088512897491455
+        },
+        {
+          "text": "# Campus Tutoring Feedback Notes 1\n\nSource notes:\n- Paste comments about TA office hours, tutoring center quality, and response time.\n- Keep details tied to specific courses when possible.\n\nCollected text:\nCollected text:\n\nStudents praised the tutoring center for helpful walkthroughs of common assignment patterns but noted inconsistent hours. One comment: \"The tutoring center saved me for lab 4 \u2014 the tutor walked me through testing strategies I didn't know.\" However, several students said that help peaks before deadlines and that it can be hard to get one-on-one time.",
+          "source": "documents/tutoring_center_feedback_01.txt",
+          "chunk_index": 0,
+          "distance": 1.0388391017913818
+        }
+      ],
+      "retrieval_quality": "",
+      "response_accuracy": "",
+      "notes": ""
+    },
+    {
+      "question": "What do students say about grading turnaround in Professor Kim's course?",
+      "expected_answer": "Turnaround is inconsistent: some students report quick grading (3\u20135 days) with detailed comments, while others report delays of 2+ weeks and minimal feedback.",
+      "system_answer": "Some students praised Professor Kim's course for quick (3-5 day) assignment grading and detailed comments, while others complained of 2+ week delays with minimal feedback.",
+      "sources": [
+        "documents/assignment_turnaround_discussion_01.txt",
+        "documents/rmp_algorithms_reviews_01.txt",
+        "documents/unofficial_department_faq.md",
+        "documents/rmp_intro_programming_reviews_01.txt"
+      ],
+      "retrieved_chunks": [
+        {
+          "text": "# Assignment Turnaround Discussion Set 1\n\nSource notes:\n- Paste comments discussing grading turnaround times and feedback clarity.\n- Keep both positive and negative examples.\n\nCollected text:\nCollected text:\n\nDiscussion threads focused on grading turnaround times and feedback usefulness. Some students praised Professor Kim's course for quick (3-5 day) assignment grading and detailed comments, while others complained of 2+ week delays with minimal feedback. A typical suggestion was to ask for sample feedback during office hours if your graded submission lacks comments.",
+          "source": "documents/assignment_turnaround_discussion_01.txt",
+          "chunk_index": 0,
+          "distance": 0.5767356157302856
+        },
+        {
+          "text": "# RMP Algorithms Reviews Set 1\n\nSource notes:\n- Paste excerpts on grading fairness, curve policy, and exam coverage.\n- Keep each excerpt readable as a standalone paragraph.\n\nCollected text:\nCollected text:\n\nStudents frequently discussed grading policies for Algorithms, with mixed opinions on the fairness of curves. One reviewer wrote: \"The professor grades harshly on correctness but gives generous partial credit if your solution approach is clear.\" Another noted that midterms skew easier than finals, and that collaboration outside of formal groups was common practice for learning problem-solving techniques.",
+          "source": "documents/rmp_algorithms_reviews_01.txt",
+          "chunk_index": 0,
+          "distance": 0.8434033989906311
+        },
+        {
+          "text": "# Unofficial Department FAQ\n\n## Source notes\n- Summarize student-maintained FAQ items that affect course planning.\n- Include policy-specific statements (attendance, office hours, grading turnaround).\n\n## Collected text\n### Attendance and Participation\n\nMany courses state attendance as optional, but several students reported that \"participation hints\" on exams come directly from in-class examples. The unofficial FAQ recommends attending labs and review sessions those weeks.\n\n### Grading Turnaround\n\nTypical grading turnaround for written assignments is between one and two weeks. If an assignment exceeds this, students recommended contacting the course coordinator early.",
+          "source": "documents/unofficial_department_faq.md",
+          "chunk_index": 0,
+          "distance": 0.9219397902488708
+        },
+        {
+          "text": "A few commenters warned that solutions posted online sometimes included mistakes, so double-check your work with peers.\nAnother reviewer highlighted that the final was cumulative and heavily weighted (40% of the grade), and that previous years' finals were good predictors for the exam style. Students recommended forming study groups and making a list of recurring question templates from lectures.",
+          "source": "documents/rmp_intro_programming_reviews_01.txt",
+          "chunk_index": 2,
+          "distance": 1.0992752313613892
+        },
+        {
+          "text": "am format and difficulty.\n- Keep one review per paragraph.\n- Remove irrelevant website navigation text.\n\nCollected text:\nProfessor Allen's exams were consistently focused on lecture examples rather than the textbook. Multiple students note the midterm had several 'trick' questions that reused homework wording, so practicing problem sets was crucial. One review said: \"If you can do all the homework and attend lectures, you'll survive the midterms \u2014 they reward pattern recognition more than deep theory.\" Several reviewers mentioned office hours were helpful but crowded the week before exams. A few commenters warned that solutions posted online sometimes included mistakes, so double-check your work with peers.",
+          "source": "documents/rmp_intro_programming_reviews_01.txt",
+          "chunk_index": 1,
+          "distance": 1.1662237644195557
+        }
+      ],
+      "retrieval_quality": "",
+      "response_accuracy": "",
+      "notes": ""
+    },
+    {
+      "question": "Do students recommend attending lectures to prepare for exams?",
+      "expected_answer": "Yes \u2014 students recommend attending lectures because exams often draw directly from lecture examples; copying examples and attending review sessions is advised.",
+      "system_answer": "Yes, students recommend attending lectures to prepare for exams.",
+      "sources": [
+        "documents/reddit_university_course_selection_01.txt",
+        "documents/rmp_intro_programming_reviews_01.txt",
+        "documents/reddit_csmajors_professor_advice_01.txt"
+      ],
+      "retrieved_chunks": [
+        {
+          "text": "ometimes the syllabus shifts a lot when a guest lecturer covers a module. Read the last two terms' threads if possible.\"\nThere were also suggestions for prioritizing courses that have strong peer study groups, as that can reduce individual workload and improve grades through shared resources.",
+          "source": "documents/reddit_university_course_selection_01.txt",
+          "chunk_index": 1,
+          "distance": 0.9258112907409668
+        },
+        {
+          "text": "A few commenters warned that solutions posted online sometimes included mistakes, so double-check your work with peers.\nAnother reviewer highlighted that the final was cumulative and heavily weighted (40% of the grade), and that previous years' finals were good predictors for the exam style. Students recommended forming study groups and making a list of recurring question templates from lectures.",
+          "source": "documents/rmp_intro_programming_reviews_01.txt",
+          "chunk_index": 2,
+          "distance": 0.9450432062149048
+        },
+        {
+          "text": "was stricter. Common advice included: attend lectures, copy down examples verbatim, and ask questions during recitation.\nSeveral commenters emphasized syllabus reading: \"This professor puts lots of grading policy details in the syllabus (like how late work is handled). If you ignore it, you'll miss how extensions are granted.\" There were also tips about which office hours are most helpful (TA vs professor) depending on the topic.",
+          "source": "documents/reddit_csmajors_professor_advice_01.txt",
+          "chunk_index": 1,
+          "distance": 0.9811082482337952
+        },
+        {
+          "text": "am format and difficulty.\n- Keep one review per paragraph.\n- Remove irrelevant website navigation text.\n\nCollected text:\nProfessor Allen's exams were consistently focused on lecture examples rather than the textbook. Multiple students note the midterm had several 'trick' questions that reused homework wording, so practicing problem sets was crucial. One review said: \"If you can do all the homework and attend lectures, you'll survive the midterms \u2014 they reward pattern recognition more than deep theory.\" Several reviewers mentioned office hours were helpful but crowded the week before exams. A few commenters warned that solutions posted online sometimes included mistakes, so double-check your work with peers.",
+          "source": "documents/rmp_intro_programming_reviews_01.txt",
+          "chunk_index": 1,
+          "distance": 1.0085796117782593
+        },
+        {
+          "text": "# Reddit CSMajors Professor Advice Thread Set 1\n\nSource notes:\n- Paste comment excerpts discussing professor teaching style and class expectations.\n- Keep username data removed.\n\nCollected text:\nCollected text:\n\nIn a CSMajors thread, students compared professors' lecture pacing and clarity. One thread contributor recommended Professor Lane for \"clear slides and predictable exams,\" while others recommended Professor Hu for interactive lectures but warned that Hu's grading style was stricter. Common advice included: attend lectures, copy down examples verbatim, and ask questions during recitation.",
+          "source": "documents/reddit_csmajors_professor_advice_01.txt",
+          "chunk_index": 0,
+          "distance": 1.0593674182891846
+        }
+      ],
+      "retrieval_quality": "",
+      "response_accuracy": "",
+      "notes": ""
+    },
+    {
+      "question": "Which course types do students report as having the heaviest workloads?",
+      "expected_answer": "Project-heavy courses (software-engineering style) peak at 20+ hours during project weeks; Data Structures and Algorithms are typically 10\u201315 hours per week; Intro-level courses report lower averages (~6\u20138 hours).",
+      "system_answer": "Project-heavy courses (software engineering-style) and Data Structures and Algorithms are reported as having the heaviest workloads, with some project-heavy courses peaking at 20+ hours during project weeks and Data Structures averaging 10-15 hours per week.",
+      "sources": [
+        "documents/course_workload_comparison_01.txt",
+        "documents/rmp_data_structures_reviews_01.txt",
+        "documents/reddit_university_course_selection_01.txt"
+      ],
+      "retrieved_chunks": [
+        {
+          "text": "# Course Workload Comparison Notes 1\n\nSource notes:\n- Paste student-reported weekly workload estimates by course.\n- Include context such as project-heavy vs exam-heavy courses.\n\nCollected text:\nCollected text:\n\nStudents compared weekly workload estimates across several courses. For example, Intro Programming sections reported 6-8 hours per week for students who had some prior experience, while Data Structures and Algorithms were commonly reported at 10-15 hours per week. Project-heavy courses (software engineering-style) sometimes peaked at 20+ hours during project weeks.",
+          "source": "documents/course_workload_comparison_01.txt",
+          "chunk_index": 0,
+          "distance": 0.5270273685455322
+        },
+        {
+          "text": "on workload and assignment intensity.\n- Include comments about weekly hours and pacing.\n\nCollected text:\nCollected text:\nMultiple students commented that the workload in Data Structures is front-loaded: weekly problem sets plus labs can average 8-12 hours per week depending on your background. One typical comment: \"Expect a steady stream of smaller assignments rather than a single big project \u2014 keep up weekly or you'll fall behind.\" Several reviews praised the TAs for helpful lab sessions but noted long queues before deadlines. There were consistent mentions that programming assignments range from straightforward implementation to edge-case-heavy debugging tasks; students recommended starting early and pairing for complex bugs.",
+          "source": "documents/rmp_data_structures_reviews_01.txt",
+          "chunk_index": 1,
+          "distance": 0.7582417130470276
+        },
+        {
+          "text": "# Reddit University Course Selection Thread Set 1\n\nSource notes:\n- Paste excerpts about selecting sections/professors and managing workload.\n- Remove unrelated comments.\n\nCollected text:\nCollected text:\n\nStudents discussing course selection warned about enrolling in project-heavy sections late in the semester. One frequent tip: \"If you want a lighter workload, pick the discussion section led by TA group A \u2014 they give more leniency on deadlines.\" Another comment suggested checking recent term forums for notes about instructor changes: \"Sometimes the syllabus shifts a lot when a guest lecturer covers a module. Read the last two terms' threads if possible.\"",
+          "source": "documents/reddit_university_course_selection_01.txt",
+          "chunk_index": 0,
+          "distance": 0.8051490783691406
+        },
+        {
+          "text": "5 hours per week. Project-heavy courses (software engineering-style) sometimes peaked at 20+ hours during project weeks.\nPractical advice: if you are balancing multiple CS courses, try to avoid two simultaneous project-heavy classes where possible, and check recent term forums for updated workload reports before finalizing your schedule.",
+          "source": "documents/course_workload_comparison_01.txt",
+          "chunk_index": 1,
+          "distance": 0.8184901475906372
+        },
+        {
+          "text": "ometimes the syllabus shifts a lot when a guest lecturer covers a module. Read the last two terms' threads if possible.\"\nThere were also suggestions for prioritizing courses that have strong peer study groups, as that can reduce individual workload and improve grades through shared resources.",
+          "source": "documents/reddit_university_course_selection_01.txt",
+          "chunk_index": 1,
+          "distance": 0.9870553612709045
+        }
+      ],
+      "retrieval_quality": "",
+      "response_accuracy": "",
+      "notes": ""
+    }
+  ]
+}

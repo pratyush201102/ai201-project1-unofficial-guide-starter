@@ -1,0 +1,8 @@
+# Discord Senior Advice Transcript 1
+
+Source notes:
+- Paste anonymized senior student advice relevant to core CS courses.
+- Keep practical recommendations and cautionary notes.
+
+Collected text:
+

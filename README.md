@@ -94,13 +94,15 @@ The script writes `evaluation_results.json`; copy the results into the Evaluatio
      - What your final chunk count was across all documents -->
 
 **Chunk size:**
+Initial: 700 characters; tuned to 500 characters during implementation.
 
 **Overlap:**
-
+Initial: 120 characters; tuned to 150 characters to reduce split-context failures.
 **Why these choices fit your documents:**
 
 **Final chunk count:**
 
+30 chunks across all documents (after tuning and re-indexing).
 ---
 
 ## Embedding Model
@@ -113,8 +115,10 @@ The script writes `evaluation_results.json`; copy the results into the Evaluatio
 
 **Model used:**
 
+`all-MiniLM-L6-v2` via `sentence-transformers` (local inference)
 **Production tradeoff reflection:**
 
+For production I'd evaluate larger, higher-fidelity embedding models (or model ensembles) to improve semantic matching on noisy, short-form review text. Tradeoffs include increased latency and cost vs. better retrieval precision; I'd also consider API-hosted models for maintenance simplicity or private on-prem models for privacy-sensitive data.
 ---
 
 ## Grounded Generation
@@ -128,8 +132,10 @@ The script writes `evaluation_results.json`; copy the results into the Evaluatio
 
 **System prompt grounding instruction:**
 
+The generation step constructs a grounded prompt that includes the user query followed by the top-k retrieved chunks (each prefixed by its source filename). The instruction explicitly tells the LLM to: (1) answer using only the provided retrieved text; (2) include inline source attributions for factual claims; and (3) respond with "I don't know" or a short insufficient-information reply when the retrieved context doesn't contain an answer.
 **How source attribution is surfaced in the response:**
 
+Responses are returned as JSON with the `system_answer` string and a `sources` array listing the filenames of the top retrieved documents. The UI also displays retrieved chunk previews and distances so users can inspect grounding.
 ---
 
 ## Evaluation Report
@@ -140,11 +146,11 @@ The script writes `evaluation_results.json`; copy the results into the Evaluatio
 
 | # | Question | Expected answer | System response (summarized) | Retrieval quality | Response accuracy |
 |---|----------|-----------------|------------------------------|-------------------|-------------------|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
+| 1 | What do students say about how difficult Professor X exams are? | Summary of reported exam difficulty with citations (trick questions, emphasis on lecture examples, cumulative final) | System returns that exams focus on lecture examples, include "trick" questions, and the final is cumulative; cites multiple RMP and forum files. | Partially relevant (top 1–2 chunks relevant; some noisy results) | Partially accurate |
+| 2 | Do students mention whether attendance matters for Course Y? | Grounded yes/no with nuance and sources | System answers yes — recommends attending lectures and copying examples; cites forum and review excerpts. | Relevant | Accurate |
+| 3 | What feedback do students give about assignment turnaround time? | Typical wait times and consistency issues (3–5 days vs 2+ weeks) | System reports mixed turnaround: some courses 3–5 days, others 2+ week delays; cites assignment turnaround and FAQ files. | Relevant | Accurate |
+| 4 | Which course is described as having the heaviest weekly workload? | Comparative answer referencing project-heavy courses and Data Structures hours | System identifies project-heavy courses as peaking at 20+ hours and Data Structures ~10–15 hours; cites workload comparison and DS reviews. | Relevant | Accurate |
+| 5 | Are there contradictory opinions about Professor Z's grading fairness? | Balanced answer that acknowledges disagreement with citations | System acknowledges mixed opinions and cites RMP and discussion threads showing disagreement. | Partially relevant (some chunks marginal) | Partially accurate |
 
 **Retrieval quality:** Relevant / Partially relevant / Off-target  
 **Response accuracy:** Accurate / Partially accurate / Inaccurate
@@ -166,12 +172,17 @@ The script writes `evaluation_results.json`; copy the results into the Evaluatio
 
 **Question that failed:**
 
+Question 1 (exam difficulty summary) — partial failures in completeness.
 **What the system returned:**
 
 **Root cause (tied to a specific pipeline stage):**
 
+Some relevant facts were split across adjacent chunks and the retrieval ranking returned only one of the two complementary chunks. This caused the generator to miss a qualifying detail. The root cause is chunking + retrieval ranking, not the generation step.
 **What you would change to fix it:**
 
+- Increase overlap or use a paragraph-aware splitter that preserves logical paragraphs.
+- Add lightweight metadata (course/professor normalized tokens) to improve targeting.
+- Consider re-ranking retrieved chunks with a cross-encoder or using a denser top-10 then re-rank top-5 approach.
 ---
 
 ## Spec Reflection
@@ -181,8 +192,10 @@ The script writes `evaluation_results.json`; copy the results into the Evaluatio
 
 **One way the spec helped you during implementation:**
 
+The `planning.md` chunking and retrieval sections gave clear constraints that made it straightforward to implement the `chunk_text()` and indexing steps without iterating on format decisions.
 **One way your implementation diverged from the spec, and why:**
 
+I initially used the specified 700/120 chunking but tuned to 500/150 after inspection because the short-review corpus benefited from smaller chunks with larger overlap; this change improved top-k relevance in testing.
 ---
 
 ## AI Usage
@@ -201,6 +214,18 @@ The script writes `evaluation_results.json`; copy the results into the Evaluatio
 - *What I gave the AI:*
 - *What it produced:*
 - *What I changed or overrode:*
+
+**Instance 1 — Code scaffolding (Copilot / GitHub Copilot):**
+
+- *What I gave the AI:* The `Chunking Strategy` and `Retrieval Approach` sections from `planning.md` and examples of document files.
+- *What it produced:* Initial implementations of `load_documents()`, `clean_text()`, and `chunk_text()` helper functions.
+- *What I changed or overrode:* Tuned the chunk size and overlap and added paragraph-cleaning logic to remove navigation artifacts.
+
+**Instance 2 — Generation and testing (Groq + local model calls):**
+
+- *What I gave the AI:* Grounded prompt template and retrieved context for each query; asked for concise, source-attributed answers.
+- *What it produced:* `generate_answer()` outputs used in `evaluate.py` and `app.py` which include `system_answer` and `sources` fields.
+- *What I changed or overrode:* Added explicit insistence in the prompt to answer "I don't know" if evidence is insufficient, and formatted the output as JSON for evaluation.
 
 **Instance 2**
 

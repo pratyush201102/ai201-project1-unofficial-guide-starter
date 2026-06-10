@@ -78,10 +78,10 @@ Notes for collection quality:
 
 | # | Question | Expected answer |
 |---|----------|-----------------|
-| 1 | According to `documents/rmp_intro_programming_reviews_01.txt`, what do students report about Professor Allen's midterms and final exam focus? | Midterms include 'trick' or application-style questions that often reuse homework wording and reward pattern recognition; the final is cumulative and heavily weighted. Students recommend practicing homework and attending lectures. |
-| 2 | Based on `documents/course_workload_comparison_01.txt` and `documents/rmp_data_structures_reviews_01.txt`, how many weekly hours do students typically report for Data Structures? | Students report about 8–15 hours per week for Data Structures (common range 8–12, with peaks up to ~15 during busy weeks). |
-| 3 | From `documents/assignment_turnaround_discussion_01.txt` and `documents/unofficial_department_faq.md`, what do students report about grading turnaround times in Professor Kim's course? | Turnaround is mixed: some report quick grading (around 3–5 days) with useful comments, while others report delays of 2+ weeks and sparse feedback. |
-| 4 | Do students in `documents/reddit_csmajors_professor_advice_01.txt` and `documents/rmp_intro_programming_reviews_01.txt` recommend attending lectures to prepare for exams? | Yes — students commonly recommend attending lectures and copying down examples because exams often draw directly from lecture examples and review sessions. |
+| 1 | What do students report about Professor Allen's midterms and final exam focus? | Midterms include 'trick' or application-style questions that often reuse homework wording and reward pattern recognition; the final is cumulative and heavily weighted. Students recommend practicing homework and attending lectures. |
+| 2 | How many weekly hours do students typically report for Data Structures? | Students report about 8–15 hours per week for Data Structures (common range 8–12, with peaks up to ~15 during busy weeks). |
+| 3 | What do students report about grading turnaround times in Professor Kim's course? | Turnaround is mixed: some report quick grading (around 3–5 days) with useful comments, while others report delays of 2+ weeks and sparse feedback. |
+| 4 | Do students in recommend attending lectures to prepare for exams? | Yes — students commonly recommend attending lectures and copying down examples because exams often draw directly from lecture examples and review sessions. |
 | 5 | Is there any information in the corpus about exam accommodations (extended time, alternate formats) for students with disabilities or neurodiversity? | No information available in the provided documents — the system should respond that the corpus contains no evidence about exam accommodations (this question is expected to fail/return "no information"). |
 
 ---
@@ -109,6 +109,7 @@ flowchart LR
      C --> D[Retrieval\nTop-k semantic similarity search\nk=5]
      D --> E[Generation\nGroq llama-3.3-70b-versatile\nGrounded prompt + source attribution]
 ```
+The architecture diagram is under docs/diagrams in the file name architecture.svg.
 
 ---
 

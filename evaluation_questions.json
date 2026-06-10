@@ -1,24 +1,24 @@
 {
   "questions": [
     {
-      "question": "What do students report about the difficulty and focus of Professor Allen's exams?",
-      "expected_answer": "Exams focus on lecture examples and pattern recognition; midterms contain tricky application-style questions; final is cumulative and heavily weighted (approx. 40%); students recommend attending lectures and practicing homework problems."
+      "question": "According to documents/rmp_intro_programming_reviews_01.txt, what do students report about Professor Allen's midterms and final exam focus?",
+      "expected_answer": "Midterms include 'trick' or application-style questions that often reuse homework wording and reward pattern recognition; the final is cumulative and heavily weighted. Students recommend practicing homework and attending lectures."
     },
     {
-      "question": "How many weekly hours do students report for Data Structures?",
-      "expected_answer": "Approximately 8–12 hours per week on average, with higher hours during assignment-heavy weeks or for students without prior experience."
+      "question": "Based on documents/course_workload_comparison_01.txt and documents/rmp_data_structures_reviews_01.txt, how many weekly hours do students typically report for Data Structures?",
+      "expected_answer": "Students report about 8–15 hours per week for Data Structures (common range 8–12, with some reports up to 15 during busy weeks)."
     },
     {
-      "question": "What do students say about grading turnaround in Professor Kim's course?",
-      "expected_answer": "Turnaround is inconsistent: some students report quick grading (3–5 days) with detailed comments, while others report delays of 2+ weeks and minimal feedback."
+      "question": "From documents/assignment_turnaround_discussion_01.txt and documents/unofficial_department_faq.md, what do students report about grading turnaround times in Professor Kim's course?",
+      "expected_answer": "Turnaround is mixed: some report quick grading (around 3–5 days) with useful comments, while others report delays of 2+ weeks and sparse feedback."
     },
     {
-      "question": "Do students recommend attending lectures to prepare for exams?",
-      "expected_answer": "Yes — students recommend attending lectures because exams often draw directly from lecture examples; copying examples and attending review sessions is advised."
+      "question": "Do students in documents/reddit_csmajors_professor_advice_01.txt and documents/rmp_intro_programming_reviews_01.txt recommend attending lectures to prepare for exams?",
+      "expected_answer": "Yes — students commonly recommend attending lectures and copying down examples because exams often draw directly from lecture examples and review sessions."
     },
     {
-      "question": "Which course types do students report as having the heaviest workloads?",
-      "expected_answer": "Project-heavy courses (software-engineering style) peak at 20+ hours during project weeks; Data Structures and Algorithms are typically 10–15 hours per week; Intro-level courses report lower averages (~6–8 hours)."
+      "question": "Is there any information in the corpus about exam accommodations (extended time, alternate formats) for students with disabilities or neurodiversity?",
+      "expected_answer": "No information available in the provided documents — the system should respond that the corpus contains no evidence about exam accommodations."
     }
   ]
 }

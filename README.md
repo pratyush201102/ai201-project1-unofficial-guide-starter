@@ -61,6 +61,12 @@ The script writes `evaluation_results.json`; copy the results into the Evaluatio
      Example: "Student reviews of CS professors at [university] — useful because official
      course descriptions don't reflect teaching style, exam difficulty, or workload." -->
 
+## Architecture
+
+![Architecture diagram](docs/diagrams/architecture.svg)
+
+(Source Mermaid: `planning.md` — `docs/diagrams/diagram.mmd`)
+
 ---
 
 ## Document Sources

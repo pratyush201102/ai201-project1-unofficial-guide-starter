@@ -1,0 +1,5 @@
+flowchart LR
+     A[Document Ingestion\nPython + pdfplumber + file loaders] --> B[Chunking\nParagraph-aware splitter\nchunk_size=700 overlap=120]
+     B --> C[Embedding + Vector Store\nsentence-transformers all-MiniLM-L6-v2\nChromaDB PersistentClient]
+     C --> D[Retrieval\nTop-k semantic similarity search\nk=5]
+     D --> E[Generation\nGroq llama-3.3-70b-versatile\nGrounded prompt + source attribution]
